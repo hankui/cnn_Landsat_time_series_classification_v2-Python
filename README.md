@@ -49,6 +49,7 @@ The parameters are:
 (8) IMG_HEIGHT: the no. of percentiles (can be 3, 5, 7 and 9) and 5, 7 and 9 used in the paper 
 
 An example would be: 
+
 version=7_4 
 
 layer=5; perc=0.1; gpui=0;IMG_HEIGHT=5
