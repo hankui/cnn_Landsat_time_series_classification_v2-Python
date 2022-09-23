@@ -8,7 +8,6 @@ The NLCD training data is available at 10.5281/zenodo.7106054
 The NLCD training data is derived from Landsat 5/7 analysis ready data (ARD) in year 2011 (as x predictor variable) and National Land Cover Database (NLCD) 2011 (as y response variable)
 The NLCD training data is distributed across Continental United States (CONUS) with 3,314,439 30m pixel locations
 The NLCD training data include (i) NLCD label with 15 classes, i.e., all NLCD classes except ice (https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description)
-
 	(ii) year 2011 growing season Landsat ARD percentiles for Landsat 5/7 bands 2, 3, 4, 5 and 7 and for 8 band ratios derived from the five bands 
 	
 	(iii) percentiles include 10th, 20th, 25th, 30th, 35th, 40th, 50th (median), 60th, 65th, 70th, 75th, 80th, 90th so that 
