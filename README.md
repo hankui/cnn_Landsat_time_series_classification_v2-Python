@@ -20,27 +20,43 @@ The NLCD training data include (i) NLCD label with 15 classes, i.e., all NLCD cl
 	(iv) the pixel location represented in Landsat ARD tile h and v no. and the pixel i and j locations in the tile
 	(v) the no. of the cloud free observations in 2011 growing season derived for the pixel location
   
+
+#*************************************************************************************************************#
+
 A munuscript describing how the data were derived and how the 1D CNN was adapted to the data is in review 
 
 
 #*************************************************************************************************************#
 
-The codes were written in python (v3.7) and tensorflow (v2.6): 
-The parameters are 
+The codes were written in python (v3.7) and tensorflow (v2.6). 
+
+The parameters are:
+
 (1) learning rate: cnn training initial learning rate 0.01 used in the paper 
+
 (2) epoch: cnn training epochs 70 used in the paper 
+
 (3) method: cnn training optimizer method 1: Adam method 2: dynamic learning rate used in the paper
+
 (4) L2: L2 regularization value; 0.001 used in paper 
+
 (5) layer: no. of CNN layers (can be 4, 5 and 8) and 5 and 8 used in the paper
+
 (6) perc: training data percentages (can be 0.1, 0.5 and 0.9) tested in the paper; the evaluation is used the left 10% 
+
 (7) gpui: which gpu process it will use (only applicable with multi-gpus) 
+
 (8) IMG_HEIGHT: the no. of percentiles (can be 3, 5, 7 and 9) and 5, 7 and 9 used in the paper 
 
 An example would be: 
 version=7_4 
+
 layer=5; perc=0.1; gpui=0;IMG_HEIGHT=5
+
 method=0; learning_rate=0.01;   epoch=10; iter=1; L2=0.001; sleep ${SLEEP}; ## Hank layer=5; perc=0.1; 
+
 echo "python Pro_2d1d_CNN_v${version}.py ${learning_rate} ${epoch} ${method} ${L2} ${layer} ${perc} ${gpui} ${IMG_HEIGHT} "
+
 python Pro_2d1d_CNN_v${version}.py ${learning_rate} ${epoch} ${method} ${L2} ${layer} ${perc} ${gpui} ${IMG_HEIGHT} > layer${layer}.p${perc}.d${IMG_HEIGHT}.rate${learning_rate}.e${epoch}.L${L2}.v${version} & 
 
 
