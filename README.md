@@ -17,6 +17,8 @@ The NLCD training data include (i) NLCD label with 15 classes, i.e., all NLCD cl
 		one can use 5 percentiles (10th, 25th, 50th, 75th, and 90th)
 					7 percentiles (10th, 20th, 35th, 50th, 65th, 80th, and 90th)
 					9 percentiles (10th, 20th, 30th, 40th, 50th, 60th, 70th, 80th, and 90th)
+	(iv) the pixel location represented in Landsat ARD tile h and v no. and the pixel i and j locations in the tile
+	(v) the no. of the cloud free observations in 2011 growing season derived for the pixel location
   
 A munuscript describing how the data were derived and how the 1D CNN was adapted to the data is in review 
 
