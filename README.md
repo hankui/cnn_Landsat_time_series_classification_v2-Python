@@ -17,7 +17,7 @@ The NLCD training data include (i) NLCD label with 15 classes, i.e., all NLCD cl
 A munuscript describing how the data were derived and how the 1D CNN was adapted to the data is in review 
 
 
-#**********************************************************************************************************************************#
+#*************************************************************************************************************#
 The codes were written in python (v3.7) and tensorflow (v2.6): 
 The parameters are 
 (1) learning rate: cnn training initial learning rate 0.01 used in the paper 
@@ -37,7 +37,7 @@ echo "python Pro_2d1d_CNN_v${version}.py ${learning_rate} ${epoch} ${method} ${L
 python Pro_2d1d_CNN_v${version}.py ${learning_rate} ${epoch} ${method} ${L2} ${layer} ${perc} ${gpui} ${IMG_HEIGHT} > layer${layer}.p${perc}.d${IMG_HEIGHT}.rate${learning_rate}.e${epoch}.L${L2}.v${version} & 
 
 
-#**********************************************************************************************************************************#
+#*************************************************************************************************************#
 Aug 29, 2021 (version 1): 
 Training data: There are 2 input text files (csv) storing the 3,314,439 NLCD and 484,476 CDL land cover training samples:
     NLCD training: ./NLCD/metric.ard.nlcd.Mar01.18.40.txt
